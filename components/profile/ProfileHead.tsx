@@ -1,11 +1,11 @@
 import {
+  type ContainerProps,
   Box,
   Container,
   HStack,
   Heading,
   SimpleGrid,
   Text,
-  type ContainerProps,
   Button,
   IconButton,
   Show,
@@ -69,14 +69,17 @@ const ProfileDetails = () => {
         </Button>
         <IconButton
           icon={<FiInstagram strokeWidth={2.5} />}
+          bg="none"
           aria-label={'instagram'}
         />
         <IconButton
           icon={<FiTwitter strokeWidth={2.5} />}
+          bg="none"
           aria-label={'twitter'}
         />
         <IconButton
           icon={<FiFacebook strokeWidth={2.5} />}
+          bg="none"
           aria-label={'facebook'}
         />
       </HStack>
@@ -85,48 +88,42 @@ const ProfileDetails = () => {
 }
 
 const ProfileHeadLarge = (props: ContainerProps) => (
-  <Container maxW="container.xl" {...props}>
-    <HStack alignItems="stretch" spacing={32} pb="12">
-      <Box flex={1} py="8">
-        <ProfileDetails />
+  <HStack alignItems="stretch" spacing={32} pb="12">
+    <Box flex={1} py="8">
+      <ProfileDetails />
+    </Box>
+    <Box flex={1} bg="gray.100" pos="relative">
+      <Box
+        bottom="-12"
+        left="-12"
+        h="full"
+        w="fit-content"
+        pos="relative"
+        aspectRatio="4/5"
+        bg="gray.200"
+      >
+        <Image
+          style={{ objectFit: 'cover' }}
+          fill
+          src={MAIN_PHOTO_URL}
+          alt="main"
+        />
       </Box>
-      <Box flex={1} bg="gray.100" pos="relative">
-        <Box
-          bottom="-12"
-          left="-12"
-          h="full"
-          w="fit-content"
-          pos="relative"
-          aspectRatio="4/5"
-          bg="gray.200"
-        >
-          <Image
-            style={{ objectFit: 'cover' }}
-            fill
-            src={MAIN_PHOTO_URL}
-            alt="main"
-          />
-        </Box>
-      </Box>
-    </HStack>
-  </Container>
+    </Box>
+  </HStack>
 )
 
-const ProfileHeadSmall = (props: ContainerProps) => (
-  <Container maxW="container.xl" {...props}>
-    <ProfileDetails />
-  </Container>
-)
+const ProfileHeadSmall = (props: ContainerProps) => <ProfileDetails />
 
 export const ProfileHead = (props: ContainerProps) => {
   return (
-    <>
+    <Container maxW="container.xl" {...props}>
       <Hide above="md">
         <ProfileHeadSmall {...props} />
       </Hide>
       <Show above="md">
         <ProfileHeadLarge {...props} />
       </Show>
-    </>
+    </Container>
   )
 }

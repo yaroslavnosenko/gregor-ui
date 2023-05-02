@@ -1,4 +1,9 @@
-import { Header, ProfileHead, ProfileGallery } from '@/components'
+import {
+  Header,
+  ProfileHead,
+  ProfileGallery,
+  ProfileToolbar,
+} from '@/components'
 import { Divider } from '@chakra-ui/react'
 
 const Profile = () => {
@@ -6,7 +11,8 @@ const Profile = () => {
     <>
       <Header />
       <ProfileHead mt={{ base: 8, md: 12 }} />
-      <ProfileGallery mt={{ base: 12, md: 24 }} />
+      <ProfileToolbar mt={12} />
+      <ProfileGallery mt={{ base: 6, md: 10 }} />
     </>
   )
 }

@@ -1,11 +1,4 @@
-import {
-  Box,
-  Center,
-  Container,
-  HStack,
-  IconButton,
-  Link,
-} from '@chakra-ui/react'
+import { Box, Container, HStack, IconButton, Link } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { FiSearch, FiUser } from 'react-icons/fi'
 
