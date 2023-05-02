@@ -24,21 +24,21 @@ const ProfileDetails = () => {
       <SimpleGrid my="8" columns={3} rowGap={4}>
         <Box>
           <Text opacity={0.7} fontFamily="sans">
-            AGE
+            PARAMS
           </Text>
-          <Text fontWeight="600">27</Text>
+          <Text fontWeight="600">32&quot; / 24&quot; / 35&quot;</Text>
         </Box>
         <Box>
           <Text opacity={0.7} fontFamily="sans">
             HEIGHT
           </Text>
-          <Text fontWeight="600">185</Text>
+          <Text fontWeight="600">5&apos;9&quot;</Text>
         </Box>
         <Box>
           <Text opacity={0.7} fontFamily="sans">
-            WEIGHT
+            SHOES
           </Text>
-          <Text fontWeight="600">57</Text>
+          <Text fontWeight="600">8.5</Text>
         </Box>
         <Box>
           <Text opacity={0.7} fontFamily="sans">
@@ -51,6 +51,12 @@ const ProfileDetails = () => {
             HAIR
           </Text>
           <Text fontWeight="600">Black</Text>
+        </Box>
+        <Box>
+          <Text opacity={0.7} fontFamily="sans">
+            GENDER
+          </Text>
+          <Text fontWeight="600">Female</Text>
         </Box>
       </SimpleGrid>
       <Text>
