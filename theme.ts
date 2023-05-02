@@ -1,4 +1,4 @@
-import { extendTheme } from '@chakra-ui/react'
+import { ChakraTheme, extendTheme } from '@chakra-ui/react'
 import '@fontsource/outfit'
 import '@fontsource/outfit/100.css'
 import '@fontsource/outfit/200.css'
@@ -10,10 +10,17 @@ import '@fontsource/outfit/700.css'
 import '@fontsource/outfit/800.css'
 import '@fontsource/outfit/900.css'
 
-const custom = {
+const custom: Partial<ChakraTheme> = {
   fonts: {
     heading: `'Outfit', sans-serif`,
     body: `'Outfit', sans-serif`,
+  },
+  components: {
+    Button: {
+      baseStyle: {
+        borderRadius: 'none',
+      },
+    },
   },
 }
 

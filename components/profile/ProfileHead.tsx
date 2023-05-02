@@ -6,15 +6,18 @@ import {
   SimpleGrid,
   Text,
   type ContainerProps,
+  Button,
+  IconButton,
 } from '@chakra-ui/react'
 import Image from 'next/image'
+import { FiFacebook, FiInstagram, FiTwitter } from 'react-icons/fi'
 
 const MAIN_PHOTO_URL = 'https://upcdn.io/12a1xj96nn5BZpBzsUw9NZW'
 
 export const ProfileHeadDesktop = (props: ContainerProps) => (
   <Container maxW="container.xl" {...props}>
     <HStack alignItems="stretch" spacing={32} pb="12">
-      <Box flex={1} py="16">
+      <Box flex={1} py="8">
         <Heading fontFamily="sans">Erika Mateo</Heading>
         <Text opacity={0.7}>Model • New York, USA</Text>
         <SimpleGrid my="8" columns={3} rowGap={4}>
@@ -53,6 +56,23 @@ export const ProfileHeadDesktop = (props: ContainerProps) => (
           Erika Mateo, Swedish model, working in the fashion capitals for 6
           years, founder of ModelMe, a blog into sustainable lifestyle.
         </Text>
+        <HStack mt="8" spacing={4}>
+          <Button color="white" bg="black">
+            Message
+          </Button>
+          <IconButton
+            icon={<FiInstagram strokeWidth={2.5} />}
+            aria-label={'instagram'}
+          />
+          <IconButton
+            icon={<FiTwitter strokeWidth={2.5} />}
+            aria-label={'twitter'}
+          />
+          <IconButton
+            icon={<FiFacebook strokeWidth={2.5} />}
+            aria-label={'facebook'}
+          />
+        </HStack>
       </Box>
       <Box flex={1} bg="gray.100" pos="relative">
         <Box
