@@ -5,9 +5,10 @@ import {
   HStack,
   IconButton,
   Link,
+  StackDivider,
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
-import { FiSearch } from 'react-icons/fi'
+import { FiSearch, FiUser } from 'react-icons/fi'
 
 export const Header = () => {
   return (
@@ -19,24 +20,33 @@ export const Header = () => {
         borderBottomWidth={1}
         pt="4"
       >
-        <Center borderRightWidth={1} h="12" px="4">
+        <Box borderRightWidth={1}>
           <Link
             fontWeight="600"
             _hover={{ textDecoration: 'none' }}
             as={NextLink}
             fontSize="xl"
             href="/"
+            lineHeight="48px"
+            px="3"
           >
             Gregor
           </Link>
-        </Center>
-        <Center borderLeftWidth={1} h="12" px="2">
+        </Box>
+        <HStack borderLeftWidth={1} spacing={0}>
           <IconButton
+            boxSize={12}
+            bg="none"
+            icon={<FiUser strokeWidth={2.5} />}
+            aria-label={'profile'}
+          />
+          <IconButton
+            boxSize={12}
             bg="none"
             icon={<FiSearch strokeWidth={2.5} />}
             aria-label={'search'}
           />
-        </Center>
+        </HStack>
       </HStack>
     </Container>
   )
