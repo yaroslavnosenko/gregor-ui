@@ -5,8 +5,8 @@ const Profile = () => {
   return (
     <>
       <Header />
-      <ProfileHead mt={16} />
-      <ProfileGallery mt={24} />
+      <ProfileHead mt={{ base: 8, md: 12 }} />
+      <ProfileGallery mt={{ base: 12, md: 24 }} />
     </>
   )
 }
