@@ -1,4 +1,4 @@
-import { Themes } from '@geist-ui/core'
+import { extendTheme } from '@chakra-ui/react'
 import '@fontsource/outfit'
 import '@fontsource/outfit/100.css'
 import '@fontsource/outfit/200.css'
@@ -10,9 +10,11 @@ import '@fontsource/outfit/700.css'
 import '@fontsource/outfit/800.css'
 import '@fontsource/outfit/900.css'
 
-export const baseTheme = Themes.createFromLight({
-  type: 'base',
-  font: {
-    sans: 'Outfit',
+const custom = {
+  fonts: {
+    heading: `'Outfit', sans-serif`,
+    body: `'Outfit', sans-serif`,
   },
-})
+}
+
+export const theme = extendTheme(custom)
