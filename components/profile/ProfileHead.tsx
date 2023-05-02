@@ -24,9 +24,9 @@ const ProfileDetails = () => {
       <SimpleGrid my="8" columns={3} rowGap={4}>
         <Box>
           <Text opacity={0.7} fontFamily="sans">
-            PARAMS
+            MEASURE
           </Text>
-          <Text fontWeight="600">32&quot; / 24&quot; / 35&quot;</Text>
+          <Text fontWeight="600">36&quot; / 24&quot; / 36&quot;</Text>
         </Box>
         <Box>
           <Text opacity={0.7} fontFamily="sans">
@@ -87,7 +87,7 @@ const ProfileDetails = () => {
   )
 }
 
-const ProfileHeadLarge = (props: ContainerProps) => (
+const ProfileHeadLarge = () => (
   <HStack alignItems="stretch" spacing={32} pb="12">
     <Box flex={1} py="8">
       <ProfileDetails />
@@ -113,16 +113,16 @@ const ProfileHeadLarge = (props: ContainerProps) => (
   </HStack>
 )
 
-const ProfileHeadSmall = (props: ContainerProps) => <ProfileDetails />
+const ProfileHeadSmall = () => <ProfileDetails />
 
 export const ProfileHead = (props: ContainerProps) => {
   return (
     <Container maxW="container.xl" {...props}>
       <Hide above="md">
-        <ProfileHeadSmall {...props} />
+        <ProfileHeadSmall />
       </Hide>
       <Show above="md">
-        <ProfileHeadLarge {...props} />
+        <ProfileHeadLarge />
       </Show>
     </Container>
   )

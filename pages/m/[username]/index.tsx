@@ -4,7 +4,6 @@ import {
   ProfileGallery,
   ProfileToolbar,
 } from '@/components'
-import { Divider } from '@chakra-ui/react'
 
 const Profile = () => {
   return (
