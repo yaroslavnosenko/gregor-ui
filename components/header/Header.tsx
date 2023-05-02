@@ -5,7 +5,6 @@ import {
   HStack,
   IconButton,
   Link,
-  StackDivider,
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { FiSearch, FiUser } from 'react-icons/fi'
@@ -29,11 +28,12 @@ export const Header = () => {
             href="/"
             lineHeight="48px"
             px="3"
+            pr="5"
           >
             Gregor
           </Link>
         </Box>
-        <HStack borderLeftWidth={1} spacing={0}>
+        <HStack borderLeftWidth={1} pl="2" spacing={0}>
           <IconButton
             boxSize={12}
             bg="none"
