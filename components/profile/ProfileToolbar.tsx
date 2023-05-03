@@ -8,7 +8,7 @@ import {
   Box,
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
-import { FiPlus, FiShare } from 'react-icons/fi'
+import { FiShare, FiSliders } from 'react-icons/fi'
 
 export const ProfileToolbar = (props: ContainerProps) => {
   return (
@@ -56,7 +56,7 @@ export const ProfileToolbar = (props: ContainerProps) => {
           <IconButton
             boxSize={12}
             bg="none"
-            icon={<FiPlus strokeWidth={2.5} />}
+            icon={<FiSliders strokeWidth={2.5} />}
             aria-label={'edit'}
           />
         </HStack>

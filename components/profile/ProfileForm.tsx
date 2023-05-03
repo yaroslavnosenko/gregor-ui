@@ -15,12 +15,12 @@ import {
 export const ProfileForm = (props: ContainerProps) => {
   return (
     <Container maxW="container.xl" {...props}>
-      <Heading fontFamily="serif">Edit Profile</Heading>
+      <Heading>Edit Profile</Heading>
       <Text opacity={0.7} mb="8">
         Set up your Gregor Profile
       </Text>
 
-      <Heading opacity={0.7} mt="12" size="md" fontFamily="serif">
+      <Heading opacity={0.7} mt="12" size="md">
         Basic Info
       </Heading>
 
@@ -69,7 +69,7 @@ export const ProfileForm = (props: ContainerProps) => {
         <Textarea size="lg" borderRadius={0} placeholder="Some Description" />
       </FormControl>
 
-      <Heading opacity={0.7} mt="16" size="md" fontFamily="serif">
+      <Heading opacity={0.7} mt="16" size="md">
         Parameters
       </Heading>
 
@@ -122,7 +122,7 @@ export const ProfileForm = (props: ContainerProps) => {
         </FormControl>
       </SimpleGrid>
 
-      <Heading opacity={0.7} mt="16" size="md" fontFamily="serif">
+      <Heading opacity={0.7} mt="16" size="md">
         Social
       </Heading>
       <FormControl mt="6">
