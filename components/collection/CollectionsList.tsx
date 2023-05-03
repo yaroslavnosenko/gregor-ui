@@ -17,6 +17,7 @@ export const CollectionsList = ({
       {list.map((collection) => (
         <Box
           cursor="pointer"
+          _hover={{ opacity: 0.7 }}
           key={collection.id}
           onClick={() => onSelectCollection(collection)}
         >
