@@ -45,10 +45,12 @@ export const Header = () => {
           </Box>
           <HStack borderLeftWidth={1} pl="2" spacing={0}>
             <IconButton
+              as={NextLink}
               icon={<FiSearch strokeWidth={2.5} />}
               size="lg"
               variant="ghost"
-              aria-label={'search'}
+              aria-label={'explore'}
+              href={Routes.EXPLORE}
             />
             <IconButton
               icon={<FiMenu strokeWidth={2.5} />}
