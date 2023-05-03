@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 
 const COLLECTIONS = [
   { id: '1', title: 'Work', mediaCount: 10 },
-  { id: '2', title: 'Polaroid', mediaCount: 5 },
+  { id: '2', title: 'Polaroids', mediaCount: 5 },
 ]
 
 const Collections = () => {
