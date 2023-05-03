@@ -4,16 +4,14 @@ import {
   HStack,
   IconButton,
   Link,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
+  useBoolean,
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { FiMenu, FiSearch } from 'react-icons/fi'
+import { Menu } from './Menu'
 
 export const Header = () => {
+  const [isOpen, setIsOpen] = useBoolean()
   return (
     <Box
       pos="sticky"
@@ -51,34 +49,17 @@ export const Header = () => {
               variant="ghost"
               aria-label={'search'}
             />
-            <Menu>
-              <MenuButton
-                as={IconButton}
-                aria-label="profile"
-                size="lg"
-                variant="ghost"
-                icon={<FiMenu strokeWidth={2.5} />}
-              />
-              <MenuList mt={-2} borderRadius={0}>
-                <MenuItem as={NextLink} href={'/m/username'}>
-                  Profile
-                </MenuItem>
-                <MenuItem as={NextLink} href={'/m/username/edit'}>
-                  Edit Profile
-                </MenuItem>
-                <MenuDivider />
-                <MenuItem as={NextLink} href={'/m/username/collections'}>
-                  My Collections
-                </MenuItem>
-                <MenuDivider />
-                <MenuItem as={NextLink} href={'/m/username/logout'}>
-                  Sign Out
-                </MenuItem>
-              </MenuList>
-            </Menu>
+            <IconButton
+              icon={<FiMenu strokeWidth={2.5} />}
+              size="lg"
+              variant="ghost"
+              aria-label={'menu'}
+              onClick={setIsOpen.on}
+            />
           </HStack>
         </HStack>
       </Container>
+      <Menu isOpen={isOpen} onClose={setIsOpen.off} />
     </Box>
   )
 }
