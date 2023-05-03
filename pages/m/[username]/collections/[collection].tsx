@@ -1,7 +1,12 @@
-import { CollectionItem, Header, ProfileGallery } from '@/components'
-import { Container, Heading, Text, Link, IconButton } from '@chakra-ui/react'
+import {
+  CollectionItem,
+  Header,
+  MediaGallery,
+  MediaGalleryAction,
+} from '@/components'
+import { Container, Text, Link, IconButton } from '@chakra-ui/react'
+import { FiPlus } from 'react-icons/fi'
 import NextLink from 'next/link'
-import { FiPlus, FiSearch, FiUpload, FiUploadCloud } from 'react-icons/fi'
 
 const Collection = () => {
   return (
@@ -25,7 +30,11 @@ const Collection = () => {
           />
         </CollectionItem>
       </Container>
-      <ProfileGallery mt={{ base: 6, md: 10 }} />
+      <MediaGallery
+        mt={{ base: 6, md: 10 }}
+        actions={[MediaGalleryAction.DELETE]}
+        onAction={console.info}
+      />
     </>
   )
 }

@@ -1,9 +1,4 @@
-import {
-  Header,
-  ProfileHead,
-  ProfileGallery,
-  ProfileToolbar,
-} from '@/components'
+import { Header, ProfileHead, MediaGallery, ProfileToolbar } from '@/components'
 
 const Profile = () => {
   return (
@@ -11,7 +6,7 @@ const Profile = () => {
       <Header />
       <ProfileHead mt={{ base: 8, md: 12 }} />
       <ProfileToolbar mt={12} />
-      <ProfileGallery mt={{ base: 6, md: 10 }} />
+      <MediaGallery mt={{ base: 6, md: 10 }} />
     </>
   )
 }
