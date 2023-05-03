@@ -1,4 +1,5 @@
 import { CollectionsList, Header } from '@/components'
+import { Routes } from '@/configs'
 import { Container, Heading, Text } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 
@@ -19,7 +20,7 @@ const Collections = () => {
           mt="4"
           list={COLLECTIONS}
           onSelectCollection={(collection) =>
-            router.push('/m/username/collections/' + collection.id)
+            router.push(Routes.PROFILE_COLLECTION('me', collection.id))
           }
         />
         <Text mt="4" opacity={0.7}>
