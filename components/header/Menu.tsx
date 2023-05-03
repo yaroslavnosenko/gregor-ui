@@ -19,7 +19,7 @@ export const Menu = (props: MenuProps) => {
   return (
     <Drawer {...props} autoFocus={false}>
       <DrawerOverlay backdropFilter="blur(7px)" />
-      <DrawerContent color="gray.50" bg="gray.900">
+      <DrawerContent>
         <DrawerBody p="8">
           <Stack spacing={4}>
             <Link as={NextLink} href="/m/username">
@@ -34,7 +34,7 @@ export const Menu = (props: MenuProps) => {
           </Stack>
         </DrawerBody>
         <DrawerFooter p="8">
-          <Link as={NextLink} href="/m/username/signout">
+          <Link opacity={0.7} as={NextLink} href="/m/username/signout">
             <Heading fontFamily="serif">Sign Out</Heading>
           </Link>
         </DrawerFooter>
