@@ -17,7 +17,7 @@ export interface MenuProps {
 
 export const Menu = (props: MenuProps) => {
   return (
-    <Drawer {...props}>
+    <Drawer {...props} autoFocus={false}>
       <DrawerOverlay backdropFilter="blur(7px)" />
       <DrawerContent color="gray.50" bg="gray.900">
         <DrawerBody p="8">
@@ -28,7 +28,7 @@ export const Menu = (props: MenuProps) => {
             <Link as={NextLink} href="/m/username/collections">
               <Heading fontFamily="serif">Collections</Heading>
             </Link>
-            <Link as={NextLink} href="/m/username/edit">
+            <Link as={NextLink} href="/m/username/settings">
               <Heading fontFamily="serif">Settings</Heading>
             </Link>
           </Stack>

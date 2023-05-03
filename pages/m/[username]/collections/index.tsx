@@ -14,15 +14,17 @@ const Collections = () => {
     <>
       <Header />
       <Container maxW="container.xl" mt={{ base: 8, md: 16 }}>
-        <Heading>My Collections</Heading>
-        <Text opacity={0.7}>Collections management will be supported soon</Text>
+        <Text opacity={0.7}>Collections</Text>
         <CollectionsList
-          mt="12"
+          mt="4"
           list={COLLECTIONS}
           onSelectCollection={(collection) =>
             router.push('/m/username/collections/' + collection.id)
           }
         />
+        <Text mt="4" opacity={0.7}>
+          Collections management will be supported soon
+        </Text>
       </Container>
     </>
   )

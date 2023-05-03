@@ -13,10 +13,9 @@ export const CollectionsList = ({
   ...other
 }: ListProps) => {
   return (
-    <VStack {...other} spacing={4} align="stretch">
+    <VStack {...other} spacing={6} align="stretch">
       {list.map((collection) => (
         <Box
-          pt="3"
           cursor="pointer"
           key={collection.id}
           onClick={() => onSelectCollection(collection)}

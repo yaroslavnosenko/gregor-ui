@@ -36,6 +36,13 @@ const custom: Partial<ChakraTheme> = {
       900: '#111111',
     },
   },
+  styles: {
+    global: {
+      '*, *::before, &::after': {
+        '-webkit-tap-highlight-color': 'transparent',
+      },
+    },
+  },
 }
 
 export const theme = extendTheme(custom)

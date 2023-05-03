@@ -15,7 +15,7 @@ const Collection = () => {
       <Container maxW="container.xl" mt={{ base: 8, md: 16 }}>
         <Link as={NextLink} href={'/m/username/collections'}>
           <Text opacity={0.7} mb="2">
-            My Collections
+            Collections
           </Text>
         </Link>
         <CollectionItem
