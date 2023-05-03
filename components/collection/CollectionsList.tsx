@@ -1,7 +1,6 @@
 import { Collection } from '@/types'
-import { VStack, StackProps, Box, Link, IconButton } from '@chakra-ui/react'
+import { VStack, StackProps, Box } from '@chakra-ui/react'
 import { CollectionItem } from './CollectionItem'
-import { FiDelete, FiMove, FiPlus, FiTrash } from 'react-icons/fi'
 
 interface ListProps extends StackProps {
   list: Collection[]

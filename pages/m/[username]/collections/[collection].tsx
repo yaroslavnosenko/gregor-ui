@@ -23,8 +23,8 @@ const Collection = () => {
           collection={{ id: '1', title: 'Work', mediaCount: 10 }}
         >
           <IconButton
-            boxSize={12}
-            bg="none"
+            size="lg"
+            variant="ghost"
             icon={<FiPlus strokeWidth={2.5} />}
             aria-label={'search'}
           />

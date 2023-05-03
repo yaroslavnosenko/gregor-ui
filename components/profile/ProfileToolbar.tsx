@@ -48,14 +48,14 @@ export const ProfileToolbar = (props: ContainerProps) => {
 
         <HStack pl="2" borderLeftWidth={1} spacing={0}>
           <IconButton
-            boxSize={12}
-            bg="none"
+            size="lg"
+            variant="ghost"
             icon={<FiShare strokeWidth={2.5} />}
             aria-label={'share'}
           />
           <IconButton
-            boxSize={12}
-            bg="none"
+            size="lg"
+            variant="ghost"
             icon={<FiSliders strokeWidth={2.5} />}
             aria-label={'edit'}
           />

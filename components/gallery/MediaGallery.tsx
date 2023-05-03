@@ -2,11 +2,10 @@ import {
   Box,
   Container,
   ContainerProps,
+  DarkMode,
   HStack,
   IconButton,
-  getToken,
   useBreakpointValue,
-  useToken,
 } from '@chakra-ui/react'
 import Image from 'next/image'
 import { FiTrash } from 'react-icons/fi'
@@ -65,16 +64,19 @@ export const MediaGallery = ({
               style={{ width: '100%', height: 'auto' }}
             />
             {actions && (
-              <HStack bg="black" spacing={0} justify="flex-end">
-                <IconButton
-                  boxSize={12}
-                  aria-label="delete"
-                  colorScheme="blackAlpha"
-                  icon={<FiTrash />}
-                  onClick={() =>
-                    onAction && onAction(url, MediaGalleryAction.DELETE)
-                  }
-                />
+              <HStack bg="gray.800" spacing={0} justify="flex-end">
+                <DarkMode>
+                  <IconButton
+                    size="lg"
+                    aria-label="delete"
+                    colorScheme="gray"
+                    variant="ghost"
+                    icon={<FiTrash />}
+                    onClick={() =>
+                      onAction && onAction(url, MediaGalleryAction.DELETE)
+                    }
+                  />
+                </DarkMode>
               </HStack>
             )}
           </Box>

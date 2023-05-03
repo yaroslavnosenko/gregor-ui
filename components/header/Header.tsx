@@ -46,18 +46,18 @@ export const Header = () => {
           </Box>
           <HStack borderLeftWidth={1} pl="2" spacing={0}>
             <IconButton
-              boxSize={12}
-              bg="none"
               icon={<FiSearch strokeWidth={2.5} />}
+              size="lg"
+              variant="ghost"
               aria-label={'search'}
             />
             <Menu>
               <MenuButton
-                boxSize={12}
                 as={IconButton}
                 aria-label="profile"
+                size="lg"
+                variant="ghost"
                 icon={<FiMenu strokeWidth={2.5} />}
-                bg="none"
               />
               <MenuList mt={-2} borderRadius={0}>
                 <MenuItem as={NextLink} href={'/m/username'}>

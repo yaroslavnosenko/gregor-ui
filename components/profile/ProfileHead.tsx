@@ -10,9 +10,10 @@ import {
   IconButton,
   Show,
   Hide,
+  Center,
 } from '@chakra-ui/react'
 import Image from 'next/image'
-import { FiFacebook, FiInstagram, FiTwitter } from 'react-icons/fi'
+import { SiFacebook, SiTwitter, SiInstagram } from 'react-icons/si'
 
 const MAIN_PHOTO_URL = 'https://upcdn.io/12a1xj96nn5BZpBzsUw9NZW'
 
@@ -64,22 +65,25 @@ const ProfileDetails = () => {
         founder of ModelMe, a blog into sustainable lifestyle.
       </Text>
       <HStack mt="8" spacing={4}>
-        <Button color="white" bg="black">
+        <Button size="lg" color="white" bg="gray.900">
           Message
         </Button>
         <IconButton
-          icon={<FiInstagram strokeWidth={2.5} />}
-          bg="none"
+          icon={<SiInstagram />}
+          size="lg"
+          variant="ghost"
           aria-label={'instagram'}
         />
         <IconButton
-          icon={<FiTwitter strokeWidth={2.5} />}
-          bg="none"
+          icon={<SiTwitter />}
+          size="lg"
+          variant="ghost"
           aria-label={'twitter'}
         />
         <IconButton
-          icon={<FiFacebook strokeWidth={2.5} />}
-          bg="none"
+          icon={<SiFacebook />}
+          size="lg"
+          variant="ghost"
           aria-label={'facebook'}
         />
       </HStack>
@@ -100,14 +104,19 @@ const ProfileHeadLarge = () => (
         w="fit-content"
         pos="relative"
         aspectRatio="4/5"
-        bg="gray.200"
+        bg="gray.900"
       >
-        <Image
+        <Center pos="absolute" w="full" h="full">
+          <Text fontFamily="serif" color="white" fontSize="9xl">
+            EM
+          </Text>
+        </Center>
+        {/* <Image
           style={{ objectFit: 'cover' }}
           fill
           src={MAIN_PHOTO_URL}
           alt="main"
-        />
+        /> */}
       </Box>
     </Box>
   </HStack>
