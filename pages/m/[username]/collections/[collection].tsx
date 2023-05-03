@@ -7,13 +7,14 @@ import {
 import { Container, Text, Link, IconButton } from '@chakra-ui/react'
 import { FiPlus } from 'react-icons/fi'
 import NextLink from 'next/link'
+import { Routes } from '@/configs'
 
 const Collection = () => {
   return (
     <>
       <Header />
       <Container maxW="container.xl" mt={{ base: 8, md: 16 }}>
-        <Link as={NextLink} href={'/m/username/collections'}>
+        <Link as={NextLink} href={Routes.PROFILE_COLLECTIONS('me')}>
           <Text opacity={0.7} mb="2">
             Collections
           </Text>

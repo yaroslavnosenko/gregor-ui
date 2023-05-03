@@ -9,6 +9,7 @@ import {
 import NextLink from 'next/link'
 import { FiMenu, FiSearch } from 'react-icons/fi'
 import { Menu } from './Menu'
+import { Routes } from '@/configs'
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useBoolean()
@@ -34,7 +35,7 @@ export const Header = () => {
               _hover={{ textDecoration: 'none' }}
               as={NextLink}
               fontSize="xl"
-              href="/"
+              href={Routes.HOME}
               lineHeight="48px"
               px="3"
               pr="5"

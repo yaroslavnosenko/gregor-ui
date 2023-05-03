@@ -1,3 +1,4 @@
+import { Routes } from '@/configs'
 import {
   Drawer,
   DrawerBody,
@@ -22,19 +23,19 @@ export const Menu = (props: MenuProps) => {
       <DrawerContent>
         <DrawerBody p="8">
           <Stack spacing={4}>
-            <Link as={NextLink} href="/m/username">
+            <Link as={NextLink} href={Routes.PROFILE('me')}>
               <Heading fontFamily="serif">Profile</Heading>
             </Link>
-            <Link as={NextLink} href="/m/username/collections">
+            <Link as={NextLink} href={Routes.PROFILE_COLLECTIONS('me')}>
               <Heading fontFamily="serif">Collections</Heading>
             </Link>
-            <Link as={NextLink} href="/m/username/settings">
+            <Link as={NextLink} href={Routes.SETTINGS}>
               <Heading fontFamily="serif">Settings</Heading>
             </Link>
           </Stack>
         </DrawerBody>
         <DrawerFooter p="8">
-          <Link opacity={0.7} as={NextLink} href="/m/username/signout">
+          <Link opacity={0.7} as={NextLink} href={Routes.SIGNOUT}>
             <Heading fontFamily="serif">Sign Out</Heading>
           </Link>
         </DrawerFooter>
