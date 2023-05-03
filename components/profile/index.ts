@@ -1,3 +1,3 @@
 export * from './ProfileHead'
 export * from './ProfileToolbar'
-export * from './ProfileForm'
+export * from './SettingsForm'
