@@ -76,7 +76,7 @@ export const ProfileForm = (props: ContainerProps) => {
       <SimpleGrid columns={3} columnGap={6}>
         <FormControl mt="6">
           <FormLabel mb="0" fontWeight="600">
-            Measurements
+            Measure
           </FormLabel>
           <Input
             size="lg"
